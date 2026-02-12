@@ -1,0 +1,242 @@
+:root {
+  --bg-dark: #050505;
+  --accent: #00f2ff;
+  --accent-glow: rgba(0, 242, 255, 0.3);
+  --text-main: #e0e0e0;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.bg-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d12;
+  z-index: -1;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 24px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+nav .links a {
+  color: var(--text-main);
+  text-decoration: none;
+  margin-left: 32px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav .links a:hover {
+  color: var(--accent);
+}
+
+section {
+  padding: 120px 10%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero {
+  margin-top: 90px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 70px;
+  margin-bottom: 24px;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 18px;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.skill-category {
+    margin-bottom: 40px;
+}
+
+.skill-label {
+    font-family: monospace;
+    color: var(--accent);
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.skill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-btn {
+    padding: 10px 20px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px; 
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.btn-main {
+  padding: 12px 30px;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  display: inline-block;
+  width: fit-content;
+}
+
+.btn-main:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 25px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: rgba(0, 242, 255, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+.contact-box {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 3rem;
+  border-radius: 12px;
+  max-width: 700px;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1.2rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--glass-border);
+  color: white;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  border-color: var(--accent);
+}
+
+footer {
+  padding: 20px;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+  color: #d8d8d8;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem 5%;
+  }
+  .links {
+    display: none;
+  }
+  section {
+    padding: 80px 5%;
+  }
+}
