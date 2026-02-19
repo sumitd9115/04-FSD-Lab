@@ -224,13 +224,14 @@
       <h2>Contact Me -</h2>
       <div class="contact-box">
         <form>
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email Address" required />
-          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <input type="text" placeholder="Full Name" id="fullname" required />
+          <input type="email" placeholder="Email Address" id="email" required />
+          <textarea rows="5" placeholder="Your Message" id="message" required></textarea>
           <button
             type="submit"
             class="btn-main"
             style="cursor: pointer; width: 100%"
+            id="submit-button"
           >
             Transmit Message
           </button>
@@ -255,5 +256,6 @@
         >
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
