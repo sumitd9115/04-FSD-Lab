@@ -23,7 +23,6 @@ const isValidEmail = email => {
     return re.test(String(email).toLowerCase());
 };
 
-// Validation Logic
 const validateInputs = () => {
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
