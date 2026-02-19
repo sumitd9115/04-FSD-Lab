@@ -1,0 +1,348 @@
+
+SumitD@Downloads-NHVV9KR MINGW64 ~
+$ mkdir fsd_ass1
+mkdir: cannot create directory ‘fsd_ass1’: File exists
+
+SumitD@Downloads-NHVV9KR MINGW64 ~
+$ cd fsd_ass1
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ pwd
+/c/Users/SumitD/fsd_ass1
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ ls
+file1..3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ touch file{1..3}.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ ls
+file1..3.log  file1.log  file2.log  file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ ls -lart
+total 16
+drwxr-xr-x 1 SumitD 197121 0 Jan 22 18:32 ../
+-rw-r--r-- 1 SumitD 197121 0 Jan 22 18:33 file1..3.log
+drwxr-xr-x 1 SumitD 197121 0 Jan 22 18:36 ./
+-rw-r--r-- 1 SumitD 197121 0 Jan 22 18:36 file1.log
+-rw-r--r-- 1 SumitD 197121 0 Jan 22 18:36 file2.log
+-rw-r--r-- 1 SumitD 197121 0 Jan 22 18:36 file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ git config --global user.name SumitDbudhe27
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ git config --global user.email SumitDbudhe27@gmail.com
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1
+$ git init
+Initialized empty Git repository in C:/Users/SumitD/fsd_ass1/.git/
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=main
+user.name=SumitDbudhe27
+user.email=SumitDbudhe27@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1..3.log
+        file1.log
+        file2.log
+        file3.log
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git add .
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1..3.log
+        new file:   file1.log
+        new file:   file2.log
+        new file:   file3.log
+
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1..3.log
+        new file:   file1.log
+        new file:   file2.log
+        new file:   file3.log
+
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git commit -m "First commit"
+[main (root-commit) d4b8f87] First commit
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file1..3.log
+ create mode 100644 file1.log
+ create mode 100644 file2.log
+ create mode 100644 file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git remove -v
+git: 'remove' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git remote -v
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git remote add origin https://github.com/SumitDbudhe27/fsd_ass1.git
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git branch -M main
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 227 bytes | 227.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/SumitDbudhe27/fsd_ass1.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git branch
+* main
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git checkout -b featureBranch
+Switched to a new branch 'featureBranch'
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git checkout -b main
+fatal: a branch named 'main' already exists
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ touch dev.txt
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ ls
+dev.txt  file1..3.log  file1.log  file2.log  file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git add .
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git status
+On branch featureBranch
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   dev.txt
+
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git commit -m "Second commit"
+[featureBranch 68575ee] Second commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dev.txt
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git remote -v
+origin  https://github.com/SumitDbudhe27/fsd_ass1.git (fetch)
+origin  https://github.com/SumitDbudhe27/fsd_ass1.git (push)
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ ls
+file1..3.log  file1.log  file2.log  file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git log
+commit d4b8f8764297652101fc09adea3c9b4032587d7f (HEAD -> main, origin/main)
+Author: SumitDbudhe27 <SumitDbudhe27@gmail.com>
+Date:   Thu Jan 22 18:41:06 2026 +0530
+
+    First commit
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git checkout featureBranch
+Switched to branch 'featureBranch'
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git log
+commit 68575ee5f9e7fb5e00f7a36ccd1c7674b7c9a9c0 (HEAD -> featureBranch)
+Author: SumitDbudhe27 <SumitDbudhe27@gmail.com>
+Date:   Thu Jan 22 18:46:41 2026 +0530
+
+    Second commit
+
+commit d4b8f8764297652101fc09adea3c9b4032587d7f (origin/main, main)
+Author: SumitDbudhe27 <SumitDbudhe27@gmail.com>
+Date:   Thu Jan 22 18:41:06 2026 +0530
+
+    First commit
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ ls
+file1..3.log  file1.log  file2.log  file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git merge featureBranch
+Updating d4b8f87..68575ee
+Fast-forward
+ dev.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dev.txt
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ ls
+dev.txt  file1..3.log  file1.log  file2.log  file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (main)
+$ git checkout featureBranch
+Switched to branch 'featureBranch'
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git push -u origin featureBranch
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 242 bytes | 242.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'featureBranch' on GitHub by visiting:
+remote:      https://github.com/SumitDbudhe27/fsd_ass1/pull/new/featureBranch
+remote:
+To https://github.com/SumitDbudhe27/fsd_ass1.git
+ * [new branch]      featureBranch -> featureBranch
+branch 'featureBranch' set up to track 'origin/featureBranch'.
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ ^C
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ cd ~
+
+SumitD@Downloads-NHVV9KR MINGW64 ~
+$ pwd
+/c/Users/SumitD
+
+SumitD@Downloads-NHVV9KR MINGW64 ~
+$ git clone https://github.com/SumitDbudhe27/fsd_ass1.git fsd_ass1_clone
+Cloning into 'fsd_ass1_clone'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 1), reused 5 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (5/5), done.
+Resolving deltas: 100% (1/1), done.
+
+SumitD@Downloads-NHVV9KR MINGW64 ~
+$ cd fsd_ass1
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git status
+On branch featureBranch
+Your branch is up to date with 'origin/featureBranch'.
+
+nothing to commit, working tree clean
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ git branch
+* featureBranch
+  main
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ ls
+dev.txt  file1..3.log  file1.log  file2.log  file3.log
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ mkdir fds_ass1_clone
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1 (featureBranch)
+$ cd fds_ass1_clone
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1/fds_ass1_clone (featureBranch)
+$ git clone https://github.com/SumitDbudhe27/fsd_ass1.git
+Cloning into 'fsd_ass1'...
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 1), reused 5 (delta 1), pack-reused 0 (from 0)
+Receiving objects: 100% (5/5), done.
+Resolving deltas: 100% (1/1), done.
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1/fds_ass1_clone (featureBranch)
+$ git status
+On branch featureBranch
+Your branch is up to date with 'origin/featureBranch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1/fds_ass1_clone (featureBranch)
+$ git branch
+* featureBranch
+  main
+
+SumitD@Downloads-NHVV9KR MINGW64 ~/fsd_ass1/fds_ass1_clone (featureBranch)
+$ ls
+fsd_ass1/
