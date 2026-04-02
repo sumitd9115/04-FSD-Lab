@@ -1,0 +1,460 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  color: #222;
+}
+
+/* ── Layout ── */
+.app {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 100vh;
+}
+
+.preview-panel {
+  overflow-y: auto;
+  max-height: 100vh;
+  padding: 2rem;
+  background: #f0f2f5;
+}
+
+/* ── Sidebar header ── */
+.sidebar-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.sidebar-header h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #111;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #1D9E75;
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  overflow-x: auto;
+  position: sticky;
+  top: 57px;
+  background: #fff;
+  z-index: 9;
+}
+
+.tab {
+  padding: 10px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: #6b7280;
+  font-family: inherit;
+  transition: all 0.15s;
+}
+
+.tab.active {
+  color: #111;
+  border-bottom-color: #1D9E75;
+  font-weight: 600;
+}
+
+.tab:hover:not(.active) {
+  color: #111;
+  background: #f9fafb;
+}
+
+/* ── Section ── */
+.section {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.section-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+}
+
+/* ── Form fields ── */
+.field {
+  margin-bottom: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.field textarea {
+  min-height: 80px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #1D9E75;
+  box-shadow: 0 0 0 3px rgba(29, 158, 117, 0.1);
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* ── Card items (education / experience / achievement) ── */
+.card-item {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 16px;
+  line-height: 1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.remove-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #0F6E56;
+  cursor: pointer;
+  padding: 6px 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.add-btn:hover {
+  color: #1D9E75;
+}
+
+/* ── Skills ── */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+  min-height: 20px;
+}
+
+.skill-tag {
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.skill-tag button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #065f46;
+  font-size: 13px;
+  line-height: 1;
+  padding: 0;
+  font-family: inherit;
+}
+
+.skill-tag button:hover {
+  color: #dc2626;
+}
+
+.skill-input-row {
+  display: flex;
+  gap: 8px;
+}
+
+.skill-input-row input {
+  flex: 1;
+  padding: 7px 10px;
+  font-size: 13px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #111;
+  font-family: inherit;
+}
+
+.skill-input-row input:focus {
+  outline: none;
+  border-color: #1D9E75;
+}
+
+.skill-input-row button {
+  padding: 7px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #1D9E75;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.skill-input-row button:hover {
+  background: #0F6E56;
+}
+
+/* ── Resume paper ── */
+.resume-paper {
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 2.5rem 2.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 900px;
+}
+
+.resume-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.5px;
+  margin-bottom: 3px;
+}
+
+.resume-title-text {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 12px;
+  color: #555;
+  border-bottom: 2px solid #1D9E75;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.resume-section-heading {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #1D9E75;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.objective-text {
+  font-size: 13px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.exp-item,
+.edu-item {
+  margin-bottom: 14px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.exp-role {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111;
+}
+
+.exp-dates {
+  font-size: 11.5px;
+  color: #9ca3af;
+}
+
+.exp-org {
+  font-size: 12.5px;
+  color: #1D9E75;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.exp-desc {
+  font-size: 12.5px;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.skill-pill {
+  background: #ecfdf5;
+  color: #065f46;
+  font-size: 11.5px;
+  padding: 4px 11px;
+  border-radius: 20px;
+  border: 1px solid #a7f3d0;
+}
+
+.ach-item {
+  font-size: 12.5px;
+  color: #374151;
+  line-height: 1.65;
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.ach-item::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #1D9E75;
+  font-size: 11px;
+  top: 1px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.empty-state p {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+/* ── Download bar ── */
+.download-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 720px;
+  margin: 0 auto 1rem;
+  padding: 0 0.25rem;
+}
+
+.preview-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  background: #1D9E75;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.download-btn:hover {
+  background: #0F6E56;
+}
+
+.download-btn:active {
+  transform: scale(0.97);
+}
