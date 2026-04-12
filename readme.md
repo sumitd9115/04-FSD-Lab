@@ -9,6 +9,10 @@ Each assignment is maintained in a **separate Git branch** for clarity and prope
 - `assignment01` – Assignment 01
 - `assignment02` – Assignment 02
 - `assignment03` – Assignment 03
+- `assignment04` – Assignment 04
+- `assignment05` – Assignment 05
+- `assignment06` – Assignment 06
+- `miniproject` – Miniproject
 
 ## 🛠️ Technologies Used
 - HTML
